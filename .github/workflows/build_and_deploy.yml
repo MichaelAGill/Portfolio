@@ -1,0 +1,48 @@
+name: .NET Core Build and Deploy
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '8.0.x' # specify your .NET version
+    
+    - name: Build with dotnet
+      run: dotnet build MyBlazorApp/MyBlazorApp.csproj --configuration Release
+      
+    - name: Publish
+      run: dotnet publish MyBlazorApp/MyBlazorApp.csproj -c Release -o published
+      
+    # Add any other steps required for testing or other pre-deployment checks
+    
+    - name: Deploy to Raspberry Pi
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.PI_HOST }}
+        username: ${{ secrets.PI_USER }}
+        password: ${{ secrets.PI_PASSWORD }}
+        port: 22
+        source: "published/*"
+        target: "/path/on/raspberry/pi"
+
+    - name: Restart Blazor app
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.PI_HOST }}
+        username: ${{ secrets.PI_USER }}
+        password: ${{ secrets.PI_PASSWORD }}
+        port: 22
+        script: |
+          sudo systemctl stop my-blazor-app
+          sudo systemctl start my-blazor-app
