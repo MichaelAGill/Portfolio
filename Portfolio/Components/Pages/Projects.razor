@@ -1,0 +1,52 @@
+﻿@page "/projects"
+@rendermode InteractiveServer
+
+<PageTitle>Projects</PageTitle>
+
+<h3>Projects</h3>
+
+<div class="accordion accordion-flush" id="projects-accordion">
+
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="projects-tamper-monkey">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-tamper-monkey" aria-expanded="false" aria-controls="collapse-tamper-monkey">
+                Tamper Monkey
+            </button>
+        </h2>
+        <div id="collapse-tamper-monkey" class="accordion-collapse collapse" aria-labelledby="collapse-tamper-monkey" data-bs-parent="#projects-accordion">
+            <div class="accordion-body">
+                <Portfolio.Components.Pages.TamperMonkey />
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="projects-custom-keyboard">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-custom-keyboard" aria-expanded="false" aria-controls="collapse-custom-keyboard">
+                Custom Keyboard
+            </button>
+        </h2>
+        <div id="collapse-custom-keyboard" class="accordion-collapse collapse" aria-labelledby="collapse-custom-keyboard" data-bs-parent="#projects-accordion">
+            <div class="accordion-body">
+                <Portfolio.Components.Pages.CustomKeyboard />
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="projects-web-development">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-web-development" aria-expanded="false" aria-controls="collapse-web-development">
+                Web Development
+            </button>
+        </h2>
+        <div id="collapse-web-development" class="accordion-collapse collapse" aria-labelledby="collapse-web-development" data-bs-parent="#projects-accordion">
+            <div class="accordion-body">
+                <Portfolio.Components.Pages.WebDevelopment />
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+
+}

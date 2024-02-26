@@ -6,4 +6,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="compilerconfig.json" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <!-- Exclude node_modules from publish -->
+    <Content Remove="node_modules\**" />
+    <None Include="node_modules\**" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
+  </ItemGroup>
+
 </Project>

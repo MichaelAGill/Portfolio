@@ -1,0 +1,10 @@
+﻿.accordion {
+    width: 1000px;
+}
+
+.accordion-item {
+    border: 1px dotted black;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px;
+}
