@@ -44,5 +44,4 @@ jobs:
         key: ${{ secrets.PI_SSH_KEY }}
         port: 2222
         script: |
-          sudo systemctl stop my-blazor-app
-          sudo systemctl start my-blazor-app
+          sudo systemctl restart nginx
