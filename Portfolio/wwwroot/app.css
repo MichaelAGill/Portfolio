@@ -1,6 +1,7 @@
-html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background: #e7ffe9;
+body {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 300;
 }
 
 .content {
