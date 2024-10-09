@@ -2,5 +2,9 @@
   {
     "outputFile": "wwwroot/custom.css",
     "inputFile": "wwwroot/custom.scss"
+  },
+  {
+    "outputFile": "Components/Pages/Home.razor.css",
+    "inputFile": "Components/Pages/Home.razor.scss"
   }
 ]

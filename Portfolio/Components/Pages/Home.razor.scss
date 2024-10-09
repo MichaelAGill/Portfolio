@@ -1,0 +1,180 @@
+﻿#fixed-background {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background: #000000;
+}
+
+.section-row {
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    width: 100vw;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.section-row-position {
+    width: 83.33333333333334vw;
+    max-width: 1200px;
+}
+
+.profile-container {
+    display: flex;
+}
+
+#profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    border: 2px solid black;
+    box-shadow: 2px 2px 5px;
+    object-fit: cover;
+}
+
+#profile-text {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    h1
+
+{
+    color: #000000;
+    font-size: 3.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+p {
+    color: #000000;
+    font-size: 2rem;
+    margin: 0;
+}
+
+}
+
+.spacer {
+    height: var(--size, 1rem);
+}
+
+#section-one,
+#section-two,
+#section-three {
+    position: relative;
+    width: 100%;
+    padding: 8rem 0;
+}
+
+#section-two {
+    background: #ffffff;
+}
+
+#section-three {
+    background: #0b0b26;
+    color: #ffffff;
+}
+
+.technology-header {
+    margin-bottom: 1em;
+    .art
+
+{
+    height: 6px;
+    width: 200px;
+    background: purple;
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 3.2rem;
+    margin: 0;
+}
+
+}
+
+.technology-stack {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    &::-webkit-scrollbar
+
+{
+    width: 15px;
+    background-color: #dfe6e9;
+}
+
+&::-webkit-scrollbar-button {
+    background: transparent;
+}
+
+&::-webkit-scrollbar-thumb {
+    background-color: #ef6083;
+    border-radius: 10px;
+    &:hover
+
+{
+    background: #ef6083;
+}
+
+}
+
+&::-webkit-scrollbar-track {
+    background-color: #b2bec3;
+    border: 5px solid white;
+    border-radius: 6px;
+    &-piece
+
+{
+    background: #e0e0e0;
+}
+
+}
+
+&::-webkit-resizer {
+    background: transparent;
+}
+
+}
+
+.framework-container {
+    width: 200px;
+    height: 200px;
+    border: 1px solid grey;
+    border-radius: 22px;
+    margin: 20px;
+    flex: 0 0 auto;
+    img
+
+{
+    width: 120px;
+    height: 120px;
+    margin: 40px;
+}
+
+}
+
+svg {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 100%;
+    height: 7vmin;
+    fill: #eee;
+    transform: translateY(-100%);
+}
+
+#svg-section-two {
+    fill: #ffffff;
+}
+
+#svg-section-three {
+    fill: #0b0b26;
+}

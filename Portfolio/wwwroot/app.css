@@ -1,4 +1,12 @@
+@font-face {
+    font-family: 'Mangiola';
+    src: url('/fonts/Mangiola-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
+    font-family: 'Mangiola', sans-serif;
     margin: 0;
     font-size: 1rem;
     font-weight: 300;
