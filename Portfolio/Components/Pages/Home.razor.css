@@ -63,19 +63,32 @@
 
 #section-one,
 #section-two,
-#section-three {
+#section-three #section-four {
   position: relative;
   width: 100%;
-  padding: 8rem 0;
+  padding: 8rem 0 12rem 0;
 }
 
 #section-two {
   background: #ffffff;
 }
+#section-two #svg-section-two {
+  fill: #ffffff;
+}
 
 #section-three {
   background: #0b0b26;
   color: #ffffff;
+}
+#section-three #svg-section-three {
+  fill: #0b0b26;
+}
+
+#section-four {
+  background: #ef6083;
+}
+#section-four #svg-section-four {
+  fill: #ef6083;
 }
 
 .technology-header {
@@ -96,31 +109,29 @@
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
+  /* Scrollbar styling for webkit browsers */
+  /* Scrollbar styling for Firefox */
+  scrollbar-width: thin; /* Sets the scrollbar thickness */
+  scrollbar-color: #ef6083 transparent; /* Thumb and track color */
 }
 .technology-stack::-webkit-scrollbar {
-  width: 15px;
-  background-color: #dfe6e9;
-}
-.technology-stack::-webkit-scrollbar-button {
-  background: transparent;
+  width: 12px; /* Sets the scrollbar width */
 }
 .technology-stack::-webkit-scrollbar-thumb {
-  background-color: #ef6083;
-  border-radius: 10px;
+  background-color: #ef6083; /* Thumb color */
+  border-radius: 10px; /* Rounded corners for the thumb */
 }
 .technology-stack::-webkit-scrollbar-thumb:hover {
-  background: #ef6083;
+  background-color: #8d42f0; /* Hover color */
 }
 .technology-stack::-webkit-scrollbar-track {
-  background-color: #b2bec3;
-  border: 5px solid white;
-  border-radius: 6px;
+  background: transparent; /* Transparent track */
 }
 .technology-stack::-webkit-scrollbar-track-piece {
-  background: #e0e0e0;
+  background: transparent; /* Transparent track ends */
 }
-.technology-stack::-webkit-resizer {
-  background: transparent;
+.technology-stack:hover {
+  scrollbar-color: #8d42f0 transparent; /* Change thumb color on hover */
 }
 
 .framework-container {
@@ -145,12 +156,4 @@ svg {
   height: 7vmin;
   fill: #eee;
   transform: translateY(-100%);
-}
-
-#svg-section-two {
-  fill: #ffffff;
-}
-
-#svg-section-three {
-  fill: #0b0b26;
 }

@@ -1,180 +1,174 @@
 ﻿#fixed-background {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    background: #000000;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background: #000000;
 }
 
 .section-row {
-    width: 600px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    width: 100vw;
-    max-width: 1440px;
-    margin: 0 auto;
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  width: 100vw;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .section-row-position {
-    width: 83.33333333333334vw;
-    max-width: 1200px;
+  width: 83.33333333333334vw;
+  max-width: 1200px;
 }
 
 .profile-container {
-    display: flex;
+  display: flex;
 }
 
 #profile-picture {
-    width: 200px;
-    height: 200px;
-    border-radius: 200px;
-    border: 2px solid black;
-    box-shadow: 2px 2px 5px;
-    object-fit: cover;
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  border: 2px solid black;
+  box-shadow: 2px 2px 5px;
+  object-fit: cover;
 }
 
 #profile-text {
-    padding-left: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    h1
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 
-{
+  h1 {
     color: #000000;
     font-size: 3.2rem;
     font-weight: 600;
     margin: 0;
-}
+  }
 
-p {
+  p {
     color: #000000;
     font-size: 2rem;
     margin: 0;
-}
-
+  }
 }
 
 .spacer {
-    height: var(--size, 1rem);
+  height: var(--size, 1rem);
 }
 
 #section-one,
 #section-two,
-#section-three {
-    position: relative;
-    width: 100%;
-    padding: 8rem 0;
+#section-three
+#section-four {
+  position: relative;
+  width: 100%;
+  padding: 8rem 0 12rem 0;
 }
 
 #section-two {
-    background: #ffffff;
+  background: #ffffff;
+
+  #svg-section-two {
+    fill: #ffffff;
+  }
 }
 
 #section-three {
-    background: #0b0b26;
-    color: #ffffff;
+  background: #0b0b26;
+  color: #ffffff;
+
+  #svg-section-three {
+    fill: #0b0b26;
+  }
+}
+
+#section-four {
+    background: #ef6083;
+
+    #svg-section-four {
+        fill: #ef6083;
+    }
 }
 
 .technology-header {
-    margin-bottom: 1em;
-    .art
+  margin-bottom: 1em;
 
-{
+  .art {
     height: 6px;
     width: 200px;
     background: purple;
     border-radius: 8px;
-}
+  }
 
-h1 {
+  h1 {
     font-size: 3.2rem;
     margin: 0;
-}
-
+  }
 }
 
 .technology-stack {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    &::-webkit-scrollbar
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 
-{
-    width: 15px;
-    background-color: #dfe6e9;
-}
+  /* Scrollbar styling for webkit browsers */
+  &::-webkit-scrollbar {
+    width: 12px; /* Sets the scrollbar width */
+  }
 
-&::-webkit-scrollbar-button {
-    background: transparent;
-}
+  &::-webkit-scrollbar-thumb {
+    background-color: #ef6083; /* Thumb color */
+    border-radius: 10px; /* Rounded corners for the thumb */
+  }
 
-&::-webkit-scrollbar-thumb {
-    background-color: #ef6083;
-    border-radius: 10px;
-    &:hover
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #8d42f0; /* Hover color */
+  }
 
-{
-    background: #ef6083;
-}
+  &::-webkit-scrollbar-track {
+    background: transparent; /* Transparent track */
+  }
 
-}
+  &::-webkit-scrollbar-track-piece {
+    background: transparent; /* Transparent track ends */
+  }
 
-&::-webkit-scrollbar-track {
-    background-color: #b2bec3;
-    border: 5px solid white;
-    border-radius: 6px;
-    &-piece
-
-{
-    background: #e0e0e0;
-}
-
-}
-
-&::-webkit-resizer {
-    background: transparent;
-}
-
+  /* Scrollbar styling for Firefox */
+  scrollbar-width: thin; /* Sets the scrollbar thickness */
+  scrollbar-color: #ef6083 transparent; /* Thumb and track color */
+  
+  &:hover {
+    scrollbar-color: #8d42f0 transparent; /* Change thumb color on hover */
+  }
 }
 
 .framework-container {
-    width: 200px;
-    height: 200px;
-    border: 1px solid grey;
-    border-radius: 22px;
-    margin: 20px;
-    flex: 0 0 auto;
-    img
-
-{
+  width: 200px;
+  height: 200px;
+  border: 1px solid grey;
+  border-radius: 22px;
+  margin: 20px;
+  flex: 0 0 auto;
+  img {
     width: 120px;
     height: 120px;
     margin: 40px;
-}
-
+  }
 }
 
 svg {
-    position: absolute;
-    top: 1px;
-    left: 0;
-    width: 100%;
-    height: 7vmin;
-    fill: #eee;
-    transform: translateY(-100%);
-}
-
-#svg-section-two {
-    fill: #ffffff;
-}
-
-#svg-section-three {
-    fill: #0b0b26;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 100%;
+  height: 7vmin;
+  fill: #eee;
+  transform: translateY(-100%);
 }

@@ -5,6 +5,10 @@
   },
   {
     "outputFile": "Components/Pages/Home.razor.css",
-    "inputFile": "Components/Pages/Home.razor.scss"
+    "inputFile": "Components/Pages/Home.razor.scss",
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
   }
 ]
